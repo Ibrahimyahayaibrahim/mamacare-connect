@@ -1,0 +1,29 @@
+{
+  "name": "mamacare-connect-backend",
+  "version": "0.1.0",
+  "description": "MamaCare Connect API - maternal, newborn, child and family health support platform",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed:vaccines": "node utils/seedVaccineSchedule.js",
+    "seed:health": "node utils/seedHealthEducation.js",
+    "seed:pap": "node utils/seedPapRecipes.js",
+    "seed:fruits": "node utils/seedFruitGuides.js",
+    "seed:familyplanning": "node utils/seedFamilyPlanning.js",
+    "seed:all": "npm run seed:vaccines && npm run seed:health && npm run seed:pap && npm run seed:fruits && npm run seed:familyplanning"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
